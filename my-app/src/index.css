@@ -1,0 +1,11 @@
+table {
+  width: 60%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightgreen;
+}
