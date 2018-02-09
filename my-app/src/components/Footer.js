@@ -1,5 +1,8 @@
 import React from 'react';
 
-export default (props) => {
-    return <footer>Copyright by {props.author}.</footer>
+export default () => {
+    let style = {
+        textAlign: 'center'
+    };
+    return <footer style={style}>Copyright by KamilaKisiel.</footer>
 }

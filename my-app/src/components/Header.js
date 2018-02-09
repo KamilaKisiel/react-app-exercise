@@ -3,8 +3,8 @@ import React from 'react';
 
 export default () => {
     let style = {
-        textAlign: 'center'
+        textAlign: 'left'
     };
     return <React.Fragment>
-        <header style={style}>'Tabela Graczy'</header>
+        <header style={style}><h1>Table of Players</h1></header>
     </React.Fragment>;}
