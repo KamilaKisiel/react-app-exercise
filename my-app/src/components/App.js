@@ -13,8 +13,8 @@ export default () => {
         <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
             <React.Fragment>
                 <Header/>
-                <Route path="/" exact component={MainContent()}/>
-                <Route path="/player/:id" component={MainContent()}/>
+                <Route path="/" exact component={MainContent}/>
+                <Route path="/player/:id" component={MainContent}/>
                 <Footer/>
             </React.Fragment>
         </MuiThemeProvider>

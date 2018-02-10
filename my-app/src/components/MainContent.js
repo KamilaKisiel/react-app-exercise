@@ -35,7 +35,18 @@ export default () => {
                         Players Table
                     </TableHeaderColumn>
                 </TableRow>
-                {playersIds.map(id => <TableRow key={id}><TableRowColumn><Link to={`/player/${id}`}>{players[id].name}</Link></TableRowColumn><TableRowColumn>{players[id].level}</TableRowColumn></TableRow>)}
+                {playersIds.map(id =>
+                    <TableRow key={id}>
+                        <TableRowColumn>
+                            <Link to={`/player/${id}`}>{players[id].name}</Link>
+                        </TableRowColumn>
+                        <TableRowColumn>
+                            {players[id].level}
+                        </TableRowColumn>
+                        <TableRowColumn>
+                            {players[id].about}
+                        </TableRowColumn>
+                    </TableRow>)}
             </TableBody>
         </Table>
     </React.Fragment>
