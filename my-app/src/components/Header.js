@@ -3,8 +3,9 @@ import React from 'react';
 
 export default () => {
     let style = {
-        textAlign: 'left'
+        textAlign: 'center',
+        fontFamily: 'Arial',
     };
     return <React.Fragment>
-        <header style={style}><h1>Table of Players</h1></header>
+        <header style={style}><h1>Riverdale</h1></header>
     </React.Fragment>;}

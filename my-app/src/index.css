@@ -1,11 +1,4 @@
-table {
-  width: 50%;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: lightgreen;
+body {
+  padding: 0;
+  margin: 0;
 }

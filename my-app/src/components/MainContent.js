@@ -12,29 +12,16 @@ import {
 
 
 export default () => {
-    let state = {
-        tableLayout: 'auto',
-        showCheckboxes: false,
-
-        displayRowCheckbox: false,
-        showRowHover:true,
-        stripedRows: false
-    };
-
-
     const playersIds = Object.keys(players);
     return   <React.Fragment>
         <Table>
-            <TableBody
-                displayRowCheckbox={state.showCheckboxes}
-                showRowHover={state.showRowHover}
-                stripedRows={state.stripedRows}
-            >
+            <TableBody>
                 <TableRow>
-                    <TableHeaderColumn colSpan="2" style={{textAlign: 'center'}}>
-                        Players Table
-                    </TableHeaderColumn>
+                    <TableHeaderColumn>Name</TableHeaderColumn>
+                    <TableHeaderColumn>Level</TableHeaderColumn>
+                    <TableHeaderColumn>Short bio</TableHeaderColumn>
                 </TableRow>
+
                 {playersIds.map(id =>
                     <TableRow key={id}>
                         <TableRowColumn>
@@ -50,8 +37,4 @@ export default () => {
             </TableBody>
         </Table>
     </React.Fragment>
-
-
-
-
 }
