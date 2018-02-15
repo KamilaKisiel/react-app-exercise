@@ -1,6 +1,6 @@
 Zadanie domowe nr 12
-0.
 
+0.
 Korzystają z create-react-app stwórz nową aplikację.
 
 1.
