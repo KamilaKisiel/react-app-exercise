@@ -29,18 +29,18 @@ class Contacts extends React.Component {
         ],
     };
 
-    addContact = ({contactName, contactPhone, contactEmail, contactCategory}) => {
+    addContact = ({name, phone, email, category}) => {
         return this.setState({
-            contacts: this.state.contacts.concat({
-                    id: Date.now().toString(32),
-                    name: contactName,
-                    phone: contactPhone,
-                    email: contactEmail,
-                    category: contactCategory ? contactCategory : 'none'
-                }
-            )
-        })
-    }
+           contacts: this.state.contacts.concat({
+                     id: Date.now().toString(32),
+                     name: name,
+                     phone: phone,
+                     email: email,
+                     category: category ? category : "none"
+                 }
+             )
+         })
+     }
 
     render() {
         return (
