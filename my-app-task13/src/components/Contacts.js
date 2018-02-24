@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ContactList from "./ContactList";
 import AddContact from "./AddContact";
 
-class Contacts extends React.Component {
+class Contacts extends Component {
     state = {
         contacts: [
             {
@@ -40,13 +40,18 @@ class Contacts extends React.Component {
                  }
              )
          })
-     }
+     };
+    removeContact = contactId => {
+        this.setState({
+            contacts: this.state.contacts.filter(contact => contact.id !== contactId)
+        })
+    };
 
     render() {
         return (
             <React.Fragment>
                 <AddContact addContact={this.addContact}/>
-                <ContactList contacts={this.state.contacts}/>
+                <ContactList contacts={this.state.contacts} removeContact={this.removeContact}/>
             </React.Fragment>
         )
     }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 const initialState = {
     contactName: '',
@@ -7,7 +7,7 @@ const initialState = {
     contactCategory: ''
 }
 
-class AddContact extends React.Component {
+class AddContact extends Component {
     state = initialState;
 
     handleChange = ({ target: { name, value } }) => {
