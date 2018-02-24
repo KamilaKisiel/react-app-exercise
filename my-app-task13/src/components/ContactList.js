@@ -7,7 +7,8 @@ class ContactList extends Component {
     showCategories = () => {
         const { contacts } = this.props;
         return contacts
-            .map(contact => contact.category.split(','))
+            .map(contact => contact.category)
+            .map(category => ` [ ${category.replace(" ", "")} ]`)
 
     };
 
