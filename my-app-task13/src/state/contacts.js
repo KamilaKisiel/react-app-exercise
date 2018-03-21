@@ -22,6 +22,13 @@ const initialState = {
             phone: 444444444,
             email: 'example@mail.com',
             category: 'job'
+        },
+        {
+            id: '4',
+            name: 'Grzegorz Brzęczyszczykiewicz',
+            phone: 555555555,
+            email: 'example@mail.com',
+            category: 'school'
         }
     ]
 };
