@@ -21,7 +21,7 @@ class ContactList extends Component {
     };
 
     render() {
-        const { contacts, removeContact } = this.props;
+        const { contacts } = this.props;
 
         return (
             <React.Fragment>

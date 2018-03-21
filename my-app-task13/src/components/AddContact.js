@@ -20,8 +20,7 @@ class AddContact extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const { contactName, contactPhone, contactEmail, contactCategory } = this.state
-        this.props.addContact(contactName, contactPhone, contactEmail, contactCategory);
+        this.props.addContact(this.state);
 
         this.setState(initialState);
     };
