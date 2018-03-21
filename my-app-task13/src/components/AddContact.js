@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
 
 const initialState = {
     contactName: '',
@@ -23,11 +25,12 @@ class AddContact extends Component {
         this.setState(initialState);
     };
 
-    inputRender = fieldName => {
+    renderInput = fieldName => {
         return (
             <input
                 name={fieldName}
                 placeholder={fieldName}
+                value={this.state[fieldName]}
                 onChange={this.handleChange}
             />
         )
@@ -38,10 +41,10 @@ class AddContact extends Component {
             <React.Fragment>
                 <h1>Add Contact</h1>
                 <form onSubmit={this.handleSubmit}>
-                    {this.inputRender('name')} <br/>
-                    {this.inputRender('phone')} <br/>
-                    {this.inputRender('email')} <br/>
-                    {this.inputRender('category')} <br/>
+                    {this.renderInput('contactName')} <br/>
+                    {this.renderInput('contactPhone')} <br/>
+                    {this.renderInput('contactEmail')} <br/>
+                    {this.renderInput('contactCategory')} <br/>
                     <button>Add Contact</button>
                 </form>
             </React.Fragment>
@@ -49,4 +52,23 @@ class AddContact extends Component {
     }
 }
 
-export default AddContact;
+export default connect (
+    state => ({
+        contacts: state.contacts
+    }),
+    dispatch => ({
+        addContact: ({
+                         contactName,
+                         contactPhone,
+                         contactEmail,
+                         contactCategory
+        }) =>
+            dispatch({
+                type: 'ADD_CONTACT',
+                contactName,
+                contactPhone,
+                contactEmail,
+                contactCategory
+            })
+    })
+)(AddContact);

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-import Contacts from "./components/Contacts";
+import ContactList from '../src/components/ContactList';
+import AddContact from '../src/components/AddContact';
 
 class App extends Component {
     render() {
         return (
             <React.Fragment>
-                <Contacts/>
+                <AddContact/><br/>
+                <ContactList/>
             </React.Fragment>
         );
     }
